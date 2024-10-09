@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">App_NES</string>
+    <string name="forgot_pasword"><u>Forgot pasword ?</u></string>
+    <string name="sign_up">Don\'t have an account ? <b>Sign Up</b></string>
+    <string name="home_button">Home</string>
+    <string name="calendar_button">Calendar</string>
+    <string name="notification_button">Notification</string>
+    <string name="profile_button">Profile</string>
+    <string name="delete_button_desc">Xóa bản ghi</string>
+    <string-array name="field_array">
+        <item>Tư vấn tình yêu</item>
+        <item>Tư vấn hôn nhân</item>
+        <item>Tư vấn gia đình</item>
+        <item>Tư vấn công việc</item>
+        <item>Tư vấn học tập</item>
+        <item>Tư vấn sức khỏe</item>
+        <item>Khác</item>
+    </string-array>
+    <string name="like">Like</string>
+
+    <!-- Mô tả cho nút bình luận -->
+    <string name="comment">Comment</string>
+    <string-array name="roles_array">
+        <item>Người dùng</item>
+        <item>Chuyên gia</item>
+    </string-array>
+</resources>

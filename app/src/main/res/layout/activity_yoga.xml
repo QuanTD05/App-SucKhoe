@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Yoga">
+
+    <!-- Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_account"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/profile_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/greeting_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xin chào,"
+                android:textSize="16sp"
+                android:textColor="#000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phạm Đức Tài"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/greeting_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Yoga Content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yoga chào mặt trời là gì?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yoga chào mặt trời là một chuỗi 12 động tác, có tên gọi gốc là Surya Namaskara bắt nguồn từ Ấn Độ. Surya cũng có nghĩa là thần mặt trời, một vị thần linh thiêng được người Hindu thờ cúng. 12 động tác kết hợp với hơi thở, tạo thành một chuỗi chuyển động, 1 giai điệu tuyệt vời cho Tâm - Thân - Trí."
+                android:textSize="16sp"
+                android:justificationMode="inter_word"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bài Yoga chào mặt trời giúp mở hơn 1.000 cơ khắp cơ thể, đem lại lợi ích nhiều mặt như: thể chất, tinh thần, tâm linh. Giúp kích thích và trẻ hóa hệ thống cơ xương khớp, cơ quan nội tạng của cơ thể, giúp thư giãn tâm trí. Chuỗi 12 động tác Yoga chào mặt trời sử dụng nguồn năng lượng âm dương, giúp cân bằng năng lượng, cân bằng cuộc sống."
+                android:textSize="16sp"
+                android:justificationMode="inter_word"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/yogo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Ý nghĩa chuỗi 12 động tác Yoga chào mặt trời"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Từ xa xưa, người ta đã quy ước với mỗi luân xa tương ứng với mỗi vùng khác nhau trên cơ thể, được cai quản bởi một vị thần ánh sáng riêng biệt. Ở vùng Luân Xa số 3 (Manipura) vùng thượng thận, gọi là luân xa búi mặt trời, là vùng trung tâm của cơ thể, được cho là kết nối trực tiếp với năng lượng mặt trời. Nên nó có một tên gọi khác là Đám rối mặt trời (Solar Plexus). Vùng đám rối mặt trời theo các nghiên cứu khoa học cho thấy, có tác động sâu sắc đến hệ thần kinh trung ương, hệ thống thần kinh thị giác, dạ dày và linh cảm."
+                android:textSize="16sp"
+                android:justificationMode="inter_word"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do vậy, bạn nên chào mặt trời vào buổi sáng sớm, vì khi những tia sáng đầu tiên chiếu vào đám rối mặt trời, sẽ sưởi ấm toàn bộ năng lượng của bạn, giúp một ngày hoạt động và làm việc của bạn hiệu quả hơn rất nhiều. Khi bạn thực hành thường xuyên, giúp tăng cường khả năng sáng tạo và trực giác sâu sắc hơn."
+                android:textSize="16sp"
+                android:justificationMode="inter_word"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Chuỗi 12 động tác Yoga chào mặt trời"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tư thế ban đầu, đứng ở vị trí đầu thảm, đứng thẳng người, thả lỏng, hai chân cạnh nhau, từ mũi chân đến gót chân. Hít thở đều 3 hơi trước khi đến với bài tập chuỗi 12 động tác"
+                android:textSize="16sp"
+                android:justificationMode="inter_word"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.1. Động tác 1: Tư thế Trái Núi - Tadasana"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đây là động tác đầu tiên trong tư thế chào mặt trời, là tiền đề cho tất cả các động tác còn lại."
+                android:textSize="16sp"
+                android:justificationMode="inter_word"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 1: Hít sâu, thở ra từ từ, đưa hai tay ra chắp trước ngực. Giữ tư thế đứng thẳng, thả lỏng thư giãn."
+                android:textSize="16sp"
+
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 2: Cân bằng lực hai bên chân, ưỡn ngực và mở rộng lồng ngực."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lợi ích: thiết lập sự cân bằng, thư giãn, tập trung."
+
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dong1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.2. Động tác 2: Tư thế Trái Núi Giơ Tay - Hasta Uttanasana"
+                android:textSize="18sp"
+                android:justificationMode="inter_word"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 1: Hít sâu, hai tay kéo căng qua đầu, ép sát vào vùng mang tai, đẩy nhẹ hông và mông ra đằng trước."
+                android:textSize="16sp"
+
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 2: Người hơi ngả ra đằng sau, đầu gối thẳng, chân thả lỏng ra, cổ vươn cao, hai mắt nhìn theo tay."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 3: Cảm nhận như bạn đang đưa trái tim và cánh tay của bạn lên bầu trời, để gửi lời chào của bạn."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lợi ích: kéo căng cơ bụng, và kéo hai tay lên cao giúp tác động vào phần nội tạng, cánh tay, tủy sống. Việc mở rộng lồng ngực, giúp bạn hấp thụ Oxy tốt hơn."
+                android:textSize="16sp"
+
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dongtac2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.3. Động tác 3: Tư thế Gập Người - Hasta Padasana"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:justificationMode="inter_word"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 1: Thở ra, giữ lưng thẳng, đẩy nhẹ vùng hông và vùng mông nhẹ ra sau, từ từ gập người về phía trước. "
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 2: Hai cánh tay kẹp sát vào mang tai, hai bàn tay đặt bên cạnh hai bàn chân, đỉnh đầu chúc xuống sàn, ép sát cằm vào ngực, khi này thả lỏng cơ vai. ( Bạn có thể hơi khuỵu gối trong trường hợp chưa quen)."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lợi ích: giúp bạn săn chắc vùng bụng, cơ đùi và vùng chân, kéo giãn toàn bộ vùng cột sống và cơ lưng."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dongtac3"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.4. Động tác 4: Tư thế Kị Sĩ - Ashwa Sanchalanasana"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:justificationMode="inter_word"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 1: Hít vào, chân phải bước dài ra sau, sao cho gối phải chạm sàn, duỗi mũi chân sau."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 2: Chân trái vuông góc với mặt sàn, đầu ngẩng lên."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lợi ích: Giúp vùng bụng, đùi săn chắc. Cải thiện sự linh hoạt vùng cổ, cột sống. Tốt cho những người bị táo bón, khó tiêu, đau thần kinh tọa."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dongtac4"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.5. Động tác 5: Tư thế Tấm Ván - Plank - Pha Lakasana"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:justificationMode="inter_word"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 1: Nín thở, đưa chân trái ra sau, đưa cơ thể về vị trí Plank, sao cho cơ thể nằm trên một đường thẳng."
+                android:textSize="16sp"
+
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 2: Bụng hơi siết nhẹ, giữ cơ thể ở trạng thái cân bằng."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lợi ích: cải thiện vấn đề về cột sống, tăng cường sức mạnh cho cơ tay và lưng."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dongtac5"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.6. Động tác 6: Tư thế Hạ 8 Điểm Chạm Sàn - Ashtanga Namaskara"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:justificationMode="inter_word"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 1: Nhẹ nhàng để hai đầu gối chạm sàn, thở ra."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 2: Đẩy hông lên, trượt người về phía trước. Cằm và ngực ở phía trên sàn."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lợi ích: tăng cường cơ bắp ở vai, cánh tay, lưng và ngực. Cải thiện tính linh hoạt của lưng và cột sống."
+                android:textSize="16sp"
+                android:textColor="#000"
+
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dongtac6"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.7. Động tác 7: Tư thế Rắn Hổ Mang - Bhujangasana"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:justificationMode="inter_word"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 1: Hít vào, trườn người về phía trước, nâng cao ngực, mắt nhìn thẳng về phía trước."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 2: Hai bàn tay áp sát mặt đất, ngang ngực, cố gắng đẩy ngực nhẹ nhàng về phía trước, đẩy rốn và giữ các ngón chân phẳng trên sàn."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lợi ích: cung cấp lượng máu dồi dào cho vùng tuyến thượng thận, và thận. Tác động  tích cực đến vùng: tử cung, buồng trứng, gan, giúp cải thiện kinh nguyệt. Cơ lưng và bụng được tăng cường sức mạnh. Cải thiện tình trạng táo bón, nâng cao sức khỏe tinh thần và thể trạng. "
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dongtac7"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.8. Động tác 8: Tư Thế Chó Úp Mặt Duỗi Mình - Adho Mukha Svanasana"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 1:Thở ra, mũi chân tỳ xuống sàn, đẩy mông cao lên, hạ thấp vai, đẩy hông lên."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 2: Các ngón tay xòe rộng, mắt nhìn tập trung vào các ngón chân hoặc rốn. Người ở tư thế chữ V úp ngược."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lợi ích: làm căng cơ vùng tay, lưng và cơ bụng, giúp chữa một số vấn đề về cột sống. tủy sống. Giúp tăng lưu lượng máu lên vùng não. "
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dong8"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.9. Động tác 9: Tư thế Kị Sĩ - Ashwa Sanchalanasana"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 1:Hít vào, để chân phải về phía trước, bắp chân phải vuông góc với sàn."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 2:Hai bàn tay chạm sàn, chân trái duỗi về phía sau, sao cho đầu gối trái chạm sàn. "
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 3:Tại vị trí này, đẩy nhẹ hông xuống sàn để cảm nhận được sức căng của vùng cơ."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lợi ích: làm săn chắc vùng bụng, lưng, hông. Giúp cổ và cột sống linh hoạt hơn, cải thiện chứng táo bón."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dongtac4"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.10. Động tác 10: Tư thế Gập Người - Hasta Padasana"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 1:Thở ra, đưa chân trái về phía trước, giữ lòng bàn tay trên sàn. Người ở tư thế gập, đầu hướng xuống đất. "
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bước 2:Trường hợp mới tập chưa quen, bạn có thể hơi khuỵu gối."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lợi ích: giúp săn chắc vùng bụng, cơ đùi, chân. Kéo giãn toàn bộ vùng cột sống, cơ lưng. Vùng hông và vai được mở rộng."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dongtac3"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.11. Động tác 11: Tư thế Trái Núi Giơ Tay - Hasta Uttanasana"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lặp lại động tác thứ hai trong chuỗi 12 động tác Yoga chào mặt trời."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dongtac2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.12. Động tác 12: Tư thế Trái Núi - Tadasana"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cách thực hiện:"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lặp lại động tác thứ nhất trong chuỗi 12 động tác Yoga chào mặt trời."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/dong1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Những lưu ý khi tập chuỗi 12 động tác Yoga chào mặt trời"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.Yoga chào mặt trời là chuỗi 12 động tác liên tục, do vậy lưu ý tập theo trình tự có sẵn, để bài tập đạt hiệu quả."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.Duy trì nhịp thở đều trong quá trình tập luyện. Hít vào và thở ra bằng mũi, hít thở sâu nhất có thể."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.Những lần đầu tập, chỉ nên thực hiện bài tập một vài lần, rồi tăng dần trong quá trình tập luyện. "
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.Chống chỉ định cho phụ nữ có thai, trong giai đoạn kinh nguyệt, gặp các vấn đề về cột sống hay mắc các bệnh về tim."
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:layout_marginBottom="8dp"
+                />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_25_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_50_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_75_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_home_24"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_25_percent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/calendar_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_app_registration_24"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Calendar"
+            app:layout_constraintStart_toStartOf="@id/guideline_25_percent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_50_percent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/notification_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_group_24"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Notifications"
+            app:layout_constraintStart_toStartOf="@id/guideline_50_percent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_75_percent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_account"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Profile"
+            app:layout_constraintStart_toStartOf="@id/guideline_75_percent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:background="@color/white"
+    android:padding="10dp">
+
+
+    <!-- Hiển thị icon bước chân -->
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_step"/>
+
+    <!-- Hiển thị số bước chân hiện tại -->
+    <TextView
+        android:id="@+id/txtCurrentSteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bước chân hiện tại: 0"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Hiển thị trạng thái mục tiêu -->
+    <TextView
+        android:id="@+id/txtGoalStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trạng thái: Chưa đạt mục tiêu"
+        android:textSize="25sp"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Nhập mục tiêu bước chân -->
+    <EditText
+        android:id="@+id/edtStepGoal"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:hint="Nhập mục tiêu bước chân"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Layout chứa các nút -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:gravity="center">
+
+        <!-- Nút cập nhật mục tiêu -->
+        <Button
+            android:id="@+id/btnSetGoal"
+            android:layout_width="170dp"
+            android:backgroundTint="#E91E63"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginEnd="5dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="Cập nhật mục tiêu" />
+
+        <!-- Nút bắt đầu đếm -->
+        <Button
+            android:id="@+id/btnStartCounting"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
+            android:text="Bắt đầu"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Layout chứa các nút -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:gravity="center">
+
+        <!-- Nút đếm lại -->
+        <Button
+            android:id="@+id/btnResetCounter"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF9800"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginEnd="5dp"
+            android:textSize="14sp"
+            android:text="Đếm lại"/>
+
+        <!-- Nút thoát -->
+        <Button
+            android:id="@+id/btnThoat"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF5722"
+            android:text="Thoát"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- RecyclerView để hiển thị lịch sử bước chân -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="16dp"/>
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_home_24"
+            android:contentDescription="Home Button" />
+
+        <ImageButton
+            android:id="@+id/calendar_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_app_registration_24"
+            android:contentDescription="Calendar Button" />
+
+        <ImageButton
+            android:id="@+id/notification_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_group_24"
+            android:contentDescription="Notification Button" />
+
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_account"
+            android:contentDescription="Profile Button"
+            android:onClick="showBottomSheetDialog" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24"><path d="M128 976V272h704v704H361l-62 62v-62H128Zm512-147h128V387H128v442h88v82h90v-82h192v82h104v-82Zm-128-43v-128h128v128H512Z"/></svg>
+
+</selector>
